@@ -11,13 +11,12 @@ h1 {
 }
 
 h2 {
-    font-size: 15px;
-    line-height: normal;
-    margin-top:0px;
-    font-style:italic;
+    font-size: 20px;
+    vertical-align: center;
+    padding: 10px;
 }
 
-main {
+body {
     margin-top: 100px;
     background-image: url(./images/SealSticker.jpg);
     background-position: left top;
@@ -34,9 +33,10 @@ header {
     right:0;
     height: 100px;
     z-index: 99;
+    box-shadow: 0px 3px 4px 2px rgb(98, 125, 125);
 }
 
-.body {
+.body-text {
     width: 60%;
     text-align: left;
     margin-left: auto;
@@ -53,17 +53,14 @@ header {
 }
 
 .linkedimage {
-    margin: 3%;
+    padding: 10px;
     position: relative;
-    width: 30%;
-    margin-left: 35%;
-    margin-right: 35%;
+    width: 28%;
 }
 
 .image {
-    height: auto;
     margin: auto;
-    width:100%;
+    width: 100%;
     border-radius: 10px;
     box-shadow: 5px 5px 5px 2px rgba(28, 29, 28, 0.863);
 }
@@ -78,7 +75,7 @@ header {
     font-size: 14px;
     left: 30%;
     right: 30%;
-    top: 70%;
+    bottom: 10%;
     padding: 10px;
 }
 
@@ -92,14 +89,62 @@ header {
     background-color: paleturquoise;
     font-size: 12px;
     line-height:normal;
+    box-shadow: 3px 0px 4px 2px rgb(98, 125, 125);
+}
+
+.navbar {
+    width: 70%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: left;
+    align-items: center;
+    align-content: center;
 }
 
 .navbaricon {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
     font-family: 'Courier New', Courier, monospace;
     color: black;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.navbartitle {
+    width: 30%;
+}
+
+.navbarparent {
+    width: 100%;
+    display:inline-flex;
+    padding-top: 10px;
+}
+
+.imagelinks {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: slateblue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    text-decoration: bold;
+}
+a:active {
+    color: black;
+    text-decoration: bold;
 }
