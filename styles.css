@@ -100,4 +100,6 @@ header {
     justify-content: center;
     align-items: center;
     align-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
 }
