@@ -37,19 +37,8 @@ header {
 }
 
 .body-text {
-    width: 60%;
-    text-align: left;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 50px;
-    background-color: darkslategray;
-    font-family: 'Courier New', Courier, monospace;
-    font: Times; /* doesn't seem to work */
-    font-size: 20px;
-    color: paleturquoise;
-    border-radius: 25px;
-    box-shadow: 5px 5px 5px 2px rgb(24, 26, 26);
-    line-height: 1.5;
+    text-wrap: wrap;
+    width:60%;
 }
 
 .linkedimage {
@@ -77,6 +66,7 @@ header {
     right: 30%;
     bottom: 10%;
     padding: 10px;
+    text-wrap: wrap;
 }
 
 .footer {
@@ -147,4 +137,28 @@ a:hover {
 a:active {
     color: black;
     text-decoration: bold;
+}
+
+.profileimage {
+    width: 30%;
+    height: auto;
+    object-fit: scale-down;
+    padding: 20px;
+}
+
+.container-body-text {
+    display: inline-flex;
+    flex-flow: row wrap;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+    background-color: darkslategray;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: paleturquoise;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px 2px rgb(24, 26, 26);
+    line-height: 1.5;
+    justify-content: space-between;
 }
