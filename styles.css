@@ -1,0 +1,95 @@
+
+h1, h2 {
+    text-align: center;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 3px;
+}
+
+h2 {
+    font-size: 15px;
+    line-height: normal;
+    margin-top:0px;
+    font-style:italic;
+}
+
+main {
+    margin-top: 100px;
+    background-image: url(./images/SealSticker.jpg);
+    background-position: left top;
+    background-size: 80px;
+    background-repeat: repeat scroll;
+    padding: 50px;
+}
+
+header {
+    background-color: paleturquoise;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    height: 100px;
+    z-index: 99;
+}
+
+.body {
+    width: 60%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+    background-color: darkslategray;
+    font-family: 'Courier New', Courier, monospace;
+    font: Times; /* doesn't seem to work */
+    font-size: 20px;
+    color: paleturquoise;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px 2px rgb(24, 26, 26);
+    line-height: 1.5;
+}
+
+.linkedimage {
+    margin: 3%;
+    position: relative;
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+.image {
+    height: auto;
+    margin: auto;
+    width:100%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 2px rgba(28, 29, 28, 0.863);
+}
+
+.textbox {
+    text-align: center;
+    position:absolute;
+    color:black;
+    background-color: white;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    left: 30%;
+    right: 30%;
+    top: 70%;
+    padding: 10px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align:center;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: paleturquoise;
+    font-size: 12px;
+    line-height:normal;
+}
