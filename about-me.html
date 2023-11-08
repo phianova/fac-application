@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Sophia Warren: About me</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="icon" href="images/favicon.png">
     </head>
     <body>
         <header>
@@ -31,10 +32,38 @@
             <div class="container-body-text">
                 <h3>Music</h3>
                 <p>I'm a huge fan of playing, writing and listening to music.
-                <!--TODO: Music section - randomised video link-->
+                <!--TODO: Music section - randomised video link
+                <script type="text/javascript" src="/js/randomisedVideo.js">-->
                 <br>Click here for a randomised video of me playing one of my original songs.
                 <!--TODO: Music section - mood quiz and spotify playlist-->
+                <br>Want a tailored playlist for your mood today? See below...
                 </p>
+            </div>
+            <div class="container-interactive">
+                <button class="open-modal">Click here for your mood-based Spotify playlist</button>
+                <div class="modal-content hidden-modal">
+                    <div class="modal-header">
+                        <button class="close-modal">X</button>
+                        <h3>How are you feeling today?</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="moods-box hidden-box">
+                            <button class="mood-selector mood-selector-a">Relaxed, like a summer's evening with a cool breeze</button>
+                            <button class="mood-selector mood-selector-b">Relaxed, like a winter's evening with a hot chocolate</button>
+                            <button class="mood-selector mood-selector-c">Angsty, like a teenager going through a breakup</button>
+                            <button class="mood-selector mood-selector-d">Angsty, because I'm mad at the government</button>
+                            <button class="mood-selector mood-selector-e">Sad, and I wanna cheer up</button>
+                            <button class="mood-selector mood-selector-f">Sad, and I wanna wallow and have a little cry</button>
+                            <button class="mood-selector mood-selector-g">Like listening to the oddest and most incongruous mix you can offer</button>
+                        </div>
+                        <div class="embedded-playlist hidden-playlist">
+                            <iframe style="border-radius:12px" src=getLinkToEmbed() width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="blur-background hidden-blur"></div>
+                    <script src="./js/moodPlaylist.js"></script>
+                </div>
             </div>
             <div class="container-body-text">
                 <h3>Nature</h3>

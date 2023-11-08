@@ -17,12 +17,13 @@ h2 {
 }
 
 body {
-    margin-top: 100px;
+    margin-top: 50px;
     background-image: url(./images/SealSticker.jpg);
     background-position: left top;
     background-size: 80px;
     background-repeat: repeat scroll;
     padding: 50px;
+    text-align: center;
 }
 
 header {
@@ -45,6 +46,11 @@ header {
     padding: 10px;
     position: relative;
     width: 28%;
+}
+
+.linkedimage:active {
+    transform: translateY(-17px);
+    transition: all 0.3s;
 }
 
 .image {
@@ -109,10 +115,11 @@ header {
 }
 
 .imagelinks {
+    box-align: center;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    padding: 20px;
+    padding: 50px;
     display: flex;
     flex-flow: row wrap;
     align-content: center;
@@ -143,15 +150,15 @@ a:active {
     width: 30%;
     height: auto;
     object-fit: scale-down;
-    padding: 20px;
+    padding: 4%;
 }
 
 .container-body-text {
+    box-align: center;
     display: inline-flex;
     flex-flow: row wrap;
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     padding: 50px;
     background-color: darkslategray;
     font-family: 'Courier New', Courier, monospace;
@@ -160,5 +167,92 @@ a:active {
     border-radius: 25px;
     box-shadow: 5px 5px 5px 2px rgb(24, 26, 26);
     line-height: 1.5;
+}
+
+.container-interactive {
+    box-align: center;
+    display: inline-flex;
+    flex-flow: row wrap;
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: darkslategray;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: paleturquoise;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px 2px rgb(24, 26, 26);
+    line-height: 1.5;
+}
+
+.open-modal {
+    background-color: turquoise;
+    color: black;
+    border: none;
+    padding: 20px;
+    font-size: 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    outline: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.open-modal:active {
+    transform: translateY(-17px);
+}
+
+.modal-content {
+    background: slateblue;
+    color:aliceblue;
+    width: 70%;
+    padding: 20px;
+    border-radius: 20px;
+    z-index: 99;
+}
+
+.modal-header {
+    display: flex;
     justify-content: space-between;
+    margin-bottom: 10px;
+    color: aliceblue;
+    font-size: 25px;
+}
+
+.modal-body {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.hidden-modal {
+    display: none;
+}
+
+.close-modal {
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 20px;
+    font-size: 30px;
+}
+
+.close-modal:hover {
+    color:rgb(98, 125, 125);
+}
+
+.blur-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.hidden-blur {
+    display: none;
 }
