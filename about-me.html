@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+    <div class="blur-background hidden-blur"></div>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Sophia Warren: About me</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
         <link rel="icon" href="images/favicon.png">
+        <script src="./js/moodPlaylist.js"></script>
     </head>
     <body>
+        <div class="header">
         <header>
             <div class="navbarparent">
                 <div class="navbartitle">
@@ -21,6 +24,7 @@
                 </div>
             </div>
         </header>
+        </div>
 
 
         <main>
@@ -44,25 +48,23 @@
                 <div class="modal-content hidden-modal">
                     <div class="modal-header">
                         <button class="close-modal">X</button>
-                        <h3>How are you feeling today?</h3>
+                        <h3 class="question">How are you feeling today?</h3>
                     </div>
                     <div class="modal-body">
-                        <div class="moods-box hidden-box">
-                            <button class="mood-selector mood-selector-a">Relaxed, like a summer's evening with a cool breeze</button>
-                            <button class="mood-selector mood-selector-b">Relaxed, like a winter's evening with a hot chocolate</button>
-                            <button class="mood-selector mood-selector-c">Angsty, like a teenager going through a breakup</button>
-                            <button class="mood-selector mood-selector-d">Angsty, because I'm mad at the government</button>
-                            <button class="mood-selector mood-selector-e">Sad, and I wanna cheer up</button>
-                            <button class="mood-selector mood-selector-f">Sad, and I wanna wallow and have a little cry</button>
-                            <button class="mood-selector mood-selector-g">Like listening to the oddest and most incongruous mix you can offer</button>
+                        <div class="moods-box">
+                            <button id="mood" class="mood-selector mood-selector-1"><a href="https://open.spotify.com/embed/playlist/4CjEUUoSBF5zdEA5jfJUNZ?utm_source=generator" target="playlistLink">Relaxed, like a summer's evening with a cool breeze</a></button>
+                            <button id="mood" class="mood-selector mood-selector-2"><a href="https://open.spotify.com/embed/playlist/2h3USsPOMXeNuz5lU4Rsdn?utm_source=generator" target="playlistLink">Relaxed, like a winter's evening with a hot chocolate</a></button>
+                            <button id="mood" class="mood-selector mood-selector-3"><a href="https://open.spotify.com/embed/playlist/05PtFCMUzNfznlZDxdepM1?utm_source=generator" target="playlistLink">Angsty, like a teenager going through a breakup</a></button>
+                            <button id="mood" class="mood-selector mood-selector-4"><a href="https://open.spotify.com/embed/playlist/3IFgoC61KWrfTN8O7O79AG?utm_source=generator" target="playlistLink">Angsty, because I'm mad at the government</a></button>
+                            <button id="mood" class="mood-selector mood-selector-5"><a href="https://open.spotify.com/embed/playlist/4aD5qAacFjB6jGwmPdJb8P?utm_source=generator" target="playlistLink">Sad, and I wanna cheer up</a></button>
+                            <button id="mood" class="mood-selector mood-selector-6"><a href="https://open.spotify.com/embed/playlist/3AQM3CEAlqK96YCohnTAcy?utm_source=generator" target="playlistLink">Sad, and I wanna wallow and have a little cry</a></button>
+                            <button id="mood" class="mood-selector mood-selector-7"><a href="https://open.spotify.com/embed/playlist/1atBiiQZQLGS6Sz6Hb5Veh?utm_source=generator" target="playlistLink">Like listening to the oddest and most incongruous mix you can offer</a></button>
                         </div>
                         <div class="embedded-playlist hidden-playlist">
-                            <iframe style="border-radius:12px" src=getLinkToEmbed() width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                            <iframe id="playlistLink" name="playlistLink" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1atBiiQZQLGS6Sz6Hb5Veh?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
                             </iframe>
                         </div>
                     </div>
-                    <div class="blur-background hidden-blur"></div>
-                    <script src="./js/moodPlaylist.js"></script>
                 </div>
             </div>
             <div class="container-body-text">

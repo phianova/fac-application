@@ -26,14 +26,14 @@ body {
     text-align: center;
 }
 
-header {
+.header {
     background-color: paleturquoise;
     position:fixed;
     top:0;
     left:0;
     right:0;
     height: 100px;
-    z-index: 99;
+    z-index: 10;
     box-shadow: 0px 3px 4px 2px rgb(98, 125, 125);
 }
 
@@ -86,6 +86,7 @@ header {
     font-size: 12px;
     line-height:normal;
     box-shadow: 3px 0px 4px 2px rgb(98, 125, 125);
+    z-index: 10;
 }
 
 .navbar {
@@ -215,8 +216,6 @@ a:active {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
-    color: aliceblue;
-    font-size: 25px;
 }
 
 .modal-body {
@@ -231,12 +230,13 @@ a:active {
 .close-modal {
     background: transparent;
     border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
     height: 20px;
     width: 20px;
     font-size: 30px;
+    color:aliceblue;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .close-modal:hover {
@@ -244,15 +244,75 @@ a:active {
 }
 
 .blur-background {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    height: 100%;
     width: 100%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
+    background-size: cover;
+    z-index: 20;
 }
 
 .hidden-blur {
+    display: none;
+}
+
+.embedded-playlist {
+    border-radius: 12px;
+    width: 100%;
+    height: 352px;
+}
+
+.hidden-playlist {
+    display: none;
+}
+
+.mood-selector {
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+    text-wrap: wrap;
+}
+
+.question {
+    color: aliceblue;
+    font-size: 25px;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.mood-selector-1 {
+    background-color:rgb(249, 155, 163);
+}
+
+.mood-selector-2 {
+    background-color: rgb(253, 129, 71);
+}
+
+.mood-selector-3 {
+    background-color: rgb(255, 90, 197);
+}
+
+.mood-selector-4 {
+    background-color: rgb(191, 88, 255);
+}
+
+.mood-selector-5 {
+    background-color: rgb(61, 255, 229);
+}
+
+.mood-selector-6 {
+    background-color: rgb(117, 149, 255);
+}
+
+.mood-selector-7 {
+    background-color: rgb(243, 250, 109);
+}
+
+.hidden-box {
     display: none;
 }
