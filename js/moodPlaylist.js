@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let blurBackground = document.querySelector(".blur-background");
     let moodBox = document.querySelector(".moods-box");
     let embeddedPlaylist = document.querySelector(".embedded-playlist");
+    let question = document.querySelector(".question");
     let moodSelector1 = document.querySelector(".mood-selector-1");
     let moodSelector2 = document.querySelector(".mood-selector-2");
     let moodSelector3 = document.querySelector(".mood-selector-3");
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let moodSelector5 = document.querySelector(".mood-selector-5");
     let moodSelector6 = document.querySelector(".mood-selector-6");
     let moodSelector7 = document.querySelector(".mood-selector-7");
+    let loadingScreen = document.querySelector(".loading-screen");
 
 // Control modal opening, closing and background blurring
     openModal.addEventListener("click", function() {
@@ -22,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
         blurBackground.classList.remove("hidden-blur");
         moodBox.classList.remove("hidden-box");
         embeddedPlaylist.classList.add("hidden-playlist");
+        question.classList.remove("hidden-question");
     });
 
     let closeModalFunction = function() {
@@ -38,106 +41,59 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-//Control mood selector and playlists - NOW UNNECESSARY!
+//Control mood selector and playlists
 
     moodSelector1.addEventListener("click", function() {
         embeddedPlaylist.classList.remove("hidden-playlist");
         moodBox.classList.add("hidden-box");
+        loadingScreen.classList.remove("hidden-loading-screen")
+        question.classList.add("hidden-question");
     });
 
     moodSelector2.addEventListener("click", function() {
         embeddedPlaylist.classList.remove("hidden-playlist");
         moodBox.classList.add("hidden-box");
+        loadingScreen.classList.remove("hidden-loading-screen");
+        question.classList.add("hidden-question");
     });
 
     moodSelector3.addEventListener("click", function() {
         embeddedPlaylist.classList.remove("hidden-playlist");
         moodBox.classList.add("hidden-box");
+        loadingScreen.classList.remove("hidden-loading-screen");
+        question.classList.add("hidden-question");
     });
 
     moodSelector4.addEventListener("click", function() {
         embeddedPlaylist.classList.remove("hidden-playlist");
         moodBox.classList.add("hidden-box");
+        loadingScreen.classList.remove("hidden-loading-screen");
+        question.classList.add("hidden-question");
     });
 
     moodSelector5.addEventListener("click", function() {
         embeddedPlaylist.classList.remove("hidden-playlist");
         moodBox.classList.add("hidden-box");
+        loadingScreen.classList.remove("hidden-loading-screen");
+        question.classList.add("hidden-question");
     });
 
     moodSelector6.addEventListener("click", function() {
         embeddedPlaylist.classList.remove("hidden-playlist");
         moodBox.classList.add("hidden-box");
+        loadingScreen.classList.remove("hidden-loading-screen");
+        question.classList.add("hidden-question");
     });
 
     moodSelector7.addEventListener("click", function() {
         embeddedPlaylist.classList.remove("hidden-playlist");
         moodBox.classList.add("hidden-box");
+        loadingScreen.classList.remove("hidden-loading-screen");
+        question.classList.add("hidden-question");
     });
-
-
-/* Let's rewrite this! Made absolutely no sense lol.
-    function getLinkToEmbed() {
-        let displayLink = "";
-        let moodSelectorA = document.querySelector(".mood-selector-a");
-        moodSelectorA.addEventListener("click", function() {
-            displayLink = "https://open.spotify.com/embed/playlist/4CjEUUoSBF5zdEA5jfJUNZ?utm_source=generator";
-        });
-        let moodSelectorB = document.querySelector(".mood-selector-b");
-        moodSelectorB.addEventListener("click", function() {
-            displayLink = "https://open.spotify.com/embed/playlist/2h3USsPOMXeNuz5lU4Rsdn?utm_source=generator";
-        });
-        let moodSelectorC = document.querySelector(".mood-selector-c");
-        moodSelectorC.addEventListener("click", function() {
-            displayLink = "https://open.spotify.com/embed/playlist/05PtFCMUzNfznlZDxdepM1?utm_source=generator";
-        });
-        let moodSelectorD = document.querySelector(".mood-selector-d");
-        moodSelectorD.addEventListener("click", function() {
-            displayLink = "https://open.spotify.com/embed/playlist/3IFgoC61KWrfTN8O7O79AG?utm_source=generator";
-        });
-        let moodSelectorE = document.querySelector(".mood-selector-e");
-        moodSelectorE.addEventListener("click", function() {
-            displayLink = "https://open.spotify.com/embed/playlist/4aD5qAacFjB6jGwmPdJb8P?utm_source=generator";
-        });
-        let moodSelectorF = document.querySelector(".mood-selector-f");
-        moodSelectorF.addEventListener("click", function() {
-            displayLink = "https://open.spotify.com/embed/playlist/3AQM3CEAlqK96YCohnTAcy?utm_source=generator";
-        });
-        let moodSelectorG = document.querySelector(".mood-selector-g");
-        moodSelectorG.addEventListener("click", function() {
-            displayLink = "https://open.spotify.com/embed/playlist/1atBiiQZQLGS6Sz6Hb5Veh?utm_source=generator";
-        });
-        return displayLink;
-    }
-*/
-/*    function getLinkToEmbed() {
-
-        var displayLink = "";
-        if (moodSelector1.classList.contains("clicked")) {
-            displayLink = "https://open.spotify.com/embed/playlist/4CjEUUoSBF5zdEA5jfJUNZ?utm_source=generator";
-        }
-        else if (moodSelector2.classList.contains("clicked")) {
-            displayLink = "https://open.spotify.com/embed/playlist/2h3USsPOMXeNuz5lU4Rsdn?utm_source=generator";
-        }
-        else if (moodSelector3.classList.contains("clicked")) {
-            displayLink = "https://open.spotify.com/embed/playlist/05PtFCMUzNfznlZDxdepM1?utm_source=generator";
-        }
-        else if (moodSelector4.classList.contains("clicked")) {
-            displayLink = "https://open.spotify.com/embed/playlist/3IFgoC61KWrfTN8O7O79AG?utm_source=generator";
-        }
-        else if (moodSelector5.classList.contains("clicked")) {
-            displayLink = "https://open.spotify.com/embed/playlist/4aD5qAacFjB6jGwmPdJb8P?utm_source=generator";
-        }
-        else if (moodSelector6.classList.contains("clicked")) {
-            displayLink = "https://open.spotify.com/embed/playlist/3AQM3CEAlqK96YCohnTAcy?utm_source=generator";
-        }
-        else if (moodSelector7.classList.contains("clicked")) {
-            displayLink = "https://open.spotify.com/embed/playlist/1atBiiQZQLGS6Sz6Hb5Veh?utm_source=generator";
-        }
-        console.log(displayLink);
-        return displayLink;
+    
+    document.getElementById("playlistLink").onload = function () {
+        loadingScreen.classList.add("hidden-loading-screen");
     }
 
-    document.getElementById("playlistLink").src = getLinkToEmbed();
-*/
 });

@@ -16,6 +16,14 @@ h2 {
     padding: 10px;
 }
 
+h3 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 3px;
+    width: 100%;
+}
+
 body {
     margin-top: 50px;
     background-image: url(./images/SealSticker.jpg);
@@ -159,7 +167,7 @@ a:active {
     display: inline-flex;
     flex-flow: row wrap;
     width: 80%;
-    margin: 0 auto;
+    margin: 10px auto;
     padding: 50px;
     background-color: darkslategray;
     font-family: 'Courier New', Courier, monospace;
@@ -168,12 +176,15 @@ a:active {
     border-radius: 25px;
     box-shadow: 5px 5px 5px 2px rgb(24, 26, 26);
     line-height: 1.5;
+    text-align: center;
+    justify-content: space-around;
 }
 
 .container-interactive {
     box-align: center;
     display: inline-flex;
     flex-flow: row wrap;
+    justify-content: space-around;
     width: 80%;
     margin: 0 auto;
     padding: 50px;
@@ -184,6 +195,7 @@ a:active {
     border-radius: 25px;
     box-shadow: 5px 5px 5px 2px rgb(24, 26, 26);
     line-height: 1.5;
+    align-items: center;
 }
 
 .open-modal {
@@ -197,6 +209,7 @@ a:active {
     transition: all 0.3s;
     outline: none;
     font-family: 'Courier New', Courier, monospace;
+    text-align: center;
 }
 
 .open-modal:active {
@@ -210,12 +223,13 @@ a:active {
     padding: 20px;
     border-radius: 20px;
     z-index: 99;
+    text-align: left;
 }
 
 .modal-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .modal-body {
@@ -263,6 +277,7 @@ a:active {
     border-radius: 12px;
     width: 100%;
     height: 352px;
+    position: relative;
 }
 
 .hidden-playlist {
@@ -283,6 +298,10 @@ a:active {
     font-size: 25px;
     text-align: left;
     margin: 0 auto;
+}
+
+.hidden-question {
+    display: none;
 }
 
 .mood-selector-1 {
@@ -314,5 +333,21 @@ a:active {
 }
 
 .hidden-box {
+    display: none;
+}
+
+.loading-screen {
+    display: block;
+    z-index: 100;
+    font-size: 40px;
+    color: aliceblue;
+    width:100%;
+    height:100px;
+    position: absolute;
+    text-align: center;
+    background-color: slateblue;
+}
+
+.hidden-loading-screen {
     display: none;
 }
