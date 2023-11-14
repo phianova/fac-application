@@ -378,7 +378,7 @@ a:active {
 .game-container {
     box-align: center;
     display: inline-flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     width: 80%;
     margin: 10px auto;
     padding: 50px;
@@ -389,7 +389,8 @@ a:active {
     box-shadow: 5px 5px 5px 2px rgb(24, 26, 26);
     line-height: 1.5;
     text-align: center;
-    justify-content: space-around;
+    justify-content:center;
+    align-items:center;
 }
 
 .game-canvas {
@@ -424,6 +425,13 @@ a:active {
     display:none;
 }
 
+.items-text-list {
+    font-size: 25px;
+    color:slateblue;
+    font-weight: bold;
+    padding:0px;
+}
+
 .game-wrong-item-screen {
     background-color:white;
     font-size: 20px;
@@ -444,12 +452,39 @@ a:active {
     display:none;
 }
 
-/*
-.game-intro-screen:hover {
-    opacity: 0%;
-    transition: opacity 2s;
+.game-complete-screen {
+    background-color:white;
+    font-size: 20px;
+    font-family:'Courier New', Courier, monospace;
+    border-radius:10px;
+    width: 900px;
+    height: 433px;
+    display:none;
 }
-*/
+
+.game-epilogue {
+    font-size: 20px;
+    font-family:'Courier New', Courier, monospace;
+    border-radius:10px;
+    width: 900px;
+    height: 433px;
+    display:none;
+    opacity: 100%;
+    background-image: url(./images/mudlark/canvas1tide.png);
+    background-size:cover;
+    width: 900px;
+    height: 433px;
+}
+
+.game-complete-screen:hover {
+    opacity: 0%;
+    transition: opacity 5s;
+}
+
+.game-credits {
+    font-size: 10px;
+    font-style:italic;
+}
 
 .restart-button {
     background-color:white;
@@ -457,13 +492,13 @@ a:active {
     font-family: 'Courier New', Courier, monospace;
     color: black;
     border-radius: 10px;
-    margin: 15px;
+    margin-top: 15px;
     font-size: 30px;
 }
 
 .restart-button:active {
-    transform: translateY(-30px);
-    transition: all 0.3s;
+    transform: translateY(-10px);
+    transition: all 0.1s;
 }
 
 .hidden-button {

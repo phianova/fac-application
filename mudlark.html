@@ -26,13 +26,25 @@
         <main>
             <div class="game-container">
                 <div>
-                    <button class="game-intro-screen" id="game-intro-screen" onclick="screen2()">Mudlark<br>A game about searching for treasure on the banks of the Thames.<br><br>Click to continue...</button>
-                    <button class="game-story-screen2" id="game-story-screen2" onclick="startGame()">Hi, I'm Jay.<br>I live near the banks of the Thames. There's all kinds of treasure buried in the silt that most folks don't even think to look for.<br>My friend is getting married today and we always used to come out here mudlarking together.<br>I want to find her some wedding day treasure - something old, something new, something borrowed and something blue.<br>But folks keep letting their dogs run wild across the beach and I don't want to get all muddy right before the wedding.<br>Can you help me?<br><br>Click to start...</button>
+                    <button class="game-intro-screen" id="game-intro-screen" onclick="screen2()">Mudlark<br><br><p class="game-screen-smaller-text">A game about searching for treasure on the banks of the Thames.</p><br><br>Click to continue...</button>
+                    <button class="game-story-screen2" id="game-story-screen2" onclick="startGame()">
+                        <p>Hi, I'm Jay. I live near the banks of the Thames. There's all kinds of treasure buried in the silt that most folks don't even think to look for. My best friend is getting married today and we always used to come out here mudlarking together.<br>I want to find her some wedding day treasure:<br></p>
+                        <p class="items-text-list">something old, <br>something new, <br>something borrowed, <br> and something blue.</p>
+                        <p>But there are always dogs running around on the beach and I don't want to get all muddy right before the wedding.<br>Can you help me?<br><br>Click to start...</p></button>
                     <button class="game-wrong-item-screen" id="game-wrong-item-screen" onclick="resumeGame()">
-                        <img id="wrong-item-display" src="./images/mudlark/hiddenItem.png">Oh no! This isn't what I'm looking for...<br>Click to continue...
+                        <img id="wrong-item-display" src="./images/mudlark/hiddenItem.png"><p id="wrong-item-text">Oh no! This isn't what I'm looking for...</p><br>Click to continue...
                     </button>
                     <button class="game-found-item-screen" id="game-found-item-screen" onclick="resumeGame()">
                         <img id="found-item-display" src="./images/mudlark/hiddenItem.png"><p id="found-item-text">Yes! I found an item!</p><br>Click to continue...
+                    </button>
+                    <button class="game-complete-screen" id="game-complete-screen" onclick="epilogue()">
+                        <p>Yes! I have everything I need.</p>
+                        <p id="game-complete-text">And I did it all in X seconds!</p>
+                        <p>Time to get to that wedding!</p>
+                    </button>
+                    <button class="game-epilogue" id="game-epilogue">
+                        <p>Oh look! Now the tide is coming in...</p>
+                        <p class="game-credits">Game created and developed by Sophia Warren. Click below to restart.</p>
                     </button>
                 </div>
                 <canvas id="canvas" class="game-canvas">

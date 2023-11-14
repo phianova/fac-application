@@ -13,6 +13,26 @@
 
     var scoreValue = 0;
     var score;
+    var time = 0;
+    var timerInterval;
+    var timerDisplay;
+
+    var timer = {
+        start: function() {
+            clearInterval(timerInterval);
+            timerInterval = setInterval(function() {
+                time++;
+            }, 1000);
+        },
+        pause: function() {
+            clearInterval(timerInterval);
+        },
+        resume: function() {
+            timerInterval = setInterval(function() {
+                time++;
+            }, 1000);
+        },
+    };
 
     function startGame() {
         toggleScreen("game-story-screen2", false);
@@ -35,6 +55,9 @@
         score = new textbox(145, 45, "white", "slateblue", gameCanvas.canvas.width-200, 10, gameCanvas.canvas.width-193, 22, "Items found: 0/4", "14px Courier New");
         scoreValue = 0;
         //console.log(scoreValue, score.text);
+        time = 0;
+        timerDisplay = new textbox(145, 45, "white", "darkcyan", 55, 10, 62, 22, "Time: 0 seconds", "14px Courier New");
+        timer.start();
     }
 
     function hiddenItemPositionX() {
@@ -332,6 +355,8 @@
         detectCollision(player, hiddenItem6);
         score.text = "Items found: "+scoreValue+"/4";
         score.update();
+        timerDisplay.text = "Time: "+time+" seconds";
+        timerDisplay.update();
     }
     
 
@@ -368,8 +393,14 @@
     } 
     
     function restartGame() {
+        if (gameOver !== 0) {    
+            gameOver.close();
+        }
+        if (displayingScreen("game-complete-screen") || displayingScreen("game-epilogue")) {
+            toggleScreen("game-complete-screen", false);
+            toggleScreen("game-epilogue", false);
+        }
         let restartButton = document.getElementById("restart-button");
-        gameOver.close();
         restartButton.classList.add("hidden-button");
         startGame();
     }
@@ -407,7 +438,6 @@
     function displayingScreen(id) {
         let element = document.getElementById(id);
         let displaying = element.style.display == "block" ? true : false;
-        console.log(displaying);
         return displaying;
     }
 
@@ -420,11 +450,12 @@
         };
         toggleScreen("canvas", true);
         dog.speedX = -3;
-        var called = 1;
-        console.log(called);
+        gameWon();
+        timer.resume();
     }
     
     function itemDiscovery(itemName) {
+        timer.pause();
         let itemType = itemName.type;
         let itemImageLink = itemName.imageLink; 
         let itemText = itemName.itemText;
@@ -433,6 +464,8 @@
             toggleScreen("game-wrong-item-screen", true);
             wrongItemImage = document.getElementById("wrong-item-display");
             wrongItemImage.src = itemImageLink;
+            wrongItemTextElement = document.getElementById("wrong-item-text");
+            wrongItemTextElement.textContent = itemText;
             //TODO tidy up function
             //TODO add wrong item text
             itemName.status = "discovered";
@@ -454,9 +487,24 @@
     }
 
     function gameWon() {
-
+        if (scoreValue == 4) {
+            gameCanvas.stop();
+            gameWonTextElement = document.getElementById("game-complete-text");
+            gameWonTextElement.textContent = "And I did it all in "+time+" seconds!"
+            toggleScreen("canvas", false);
+            toggleScreen("game-complete-screen", true);
+            let restartButton = document.getElementById("restart-button");
+            restartButton.classList.remove("hidden-button");
+            scoreValue = 0;
+            gameOver = 0;
+            timer.pause();
+        }
     }
     
+    function epilogue() {
+        toggleScreen("game-complete-screen", false);
+        toggleScreen("game-epilogue", true);
+    }
     
 
 //});
