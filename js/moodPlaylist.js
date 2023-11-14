@@ -2,9 +2,9 @@
 document.addEventListener("DOMContentLoaded", function() {
 
 //Declarations
-    let modalContent = document.querySelector(".modal-content");
-    let openModal = document.querySelector(".open-modal");
-    let closeModal = document.querySelector(".close-modal");
+    let playlistModalContent = document.querySelector(".playlist-modal-content");
+    let openPlaylistModal = document.querySelector(".open-playlist-modal");
+    let closePlaylistModal = document.querySelector(".close-playlist-modal");
     let blurBackground = document.querySelector(".blur-background");
     let moodBox = document.querySelector(".moods-box");
     let embeddedPlaylist = document.querySelector(".embedded-playlist");
@@ -19,25 +19,25 @@ document.addEventListener("DOMContentLoaded", function() {
     let loadingScreen = document.querySelector(".loading-screen");
 
 // Control modal opening, closing and background blurring
-    openModal.addEventListener("click", function() {
-        modalContent.classList.remove("hidden-modal");
+    openPlaylistModal.addEventListener("click", function() {
+        playlistModalContent.classList.remove("hidden-modal");
         blurBackground.classList.remove("hidden-blur");
         moodBox.classList.remove("hidden-box");
         embeddedPlaylist.classList.add("hidden-playlist");
         question.classList.remove("hidden-question");
     });
 
-    let closeModalFunction = function() {
-        modalContent.classList.add("hidden-modal");
+    let closePlaylistModalFunction = function() {
+        playlistModalContent.classList.add("hidden-modal");
         blurBackground.classList.add("hidden-blur");
     };
 
-    blurBackground.addEventListener("click", closeModalFunction);
-    closeModal.addEventListener("click", closeModalFunction);
+    blurBackground.addEventListener("click", closePlaylistModalFunction);
+    closePlaylistModal.addEventListener("click", closePlaylistModalFunction);
 
     document.addEventListener("keydown", function(event) {
         if (event.key === "Escape" && !modalContent.classList.contains("hidden")) {
-            closeModalFunction();
+            closePlaylistModalFunction();
         }
     });
 

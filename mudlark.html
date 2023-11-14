@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mudlark</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="icon" href="images/favicon.png">
+    </head>
+    <body class="game-body">
+       <header class="header">
+            <div class="navbarparent">
+                <div class="navbartitle">
+                    <h2>Sophia Warren (aspiring developer) </h2>
+                </div>
+                <div class="navbar">
+                    <div class="navbaricon"><a href="https://phianova.github.io"><p>Home</p></a></div>
+                    <div class="navbaricon"><a href="https://phianova.github.io/about-me"><p>About Me</p></a></div>
+                    <div class="navbaricon"><a href="https://phianova.github.io/career"><p>Why this? Why now?</p></a></div>
+                    <div class="navbaricon"><a href="https://phianova.github.io/links"><p>Find me</p></a></div>                
+                    <div class="navbaricon"><a href="https://phianova.github.io/mudlark"><p>Mudlark (Game)</p></a></div>  
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="game-container">
+                <div>
+                    <button class="game-intro-screen" id="game-intro-screen" onclick="screen2()">Mudlark<br>A game about searching for treasure on the banks of the Thames.<br><br>Click to continue...</button>
+                    <button class="game-story-screen2" id="game-story-screen2" onclick="startGame()">Hi, I'm Jay.<br>I live near the banks of the Thames. There's all kinds of treasure buried in the silt that most folks don't even think to look for.<br>My friend is getting married today and we always used to come out here mudlarking together.<br>I want to find her some wedding day treasure - something old, something new, something borrowed and something blue.<br>But folks keep letting their dogs run wild across the beach and I don't want to get all muddy right before the wedding.<br>Can you help me?<br><br>Click to start...</button>
+                    <button class="game-wrong-item-screen" id="game-wrong-item-screen" onclick="resumeGame()">
+                        <img id="wrong-item-display" src="./images/mudlark/hiddenItem.png">Oh no! This isn't what I'm looking for...<br>Click to continue...
+                    </button>
+                    <button class="game-found-item-screen" id="game-found-item-screen" onclick="resumeGame()">
+                        <img id="found-item-display" src="./images/mudlark/hiddenItem.png"><p id="found-item-text">Yes! I found an item!</p><br>Click to continue...
+                    </button>
+                </div>
+                <canvas id="canvas" class="game-canvas">
+                </canvas>
+                <body onload="introScreen()">
+                <button onclick="restartGame()" id="restart-button" class="restart-button hidden-button">Try again?</button>
+                <script src="./js/mudlark.js"></script>                              
+             </div>
+        </main>   
+        
+        
+    </body>
+
+
+
+
+
+
+    <div class="footer">
+        <footer>
+            <p>This website is part of my application to the Founders and Coders programme. Hey Founders and Coders! &#128075;
+            <br> (if you haven't heard of F&C you can check them out <a href="https://www.foundersandcoders.com/learn/" target="blank">here</a>)</p>
+        </footer>
+    </div>
+ </html>

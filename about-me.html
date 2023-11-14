@@ -9,7 +9,7 @@
         <link rel="icon" href="images/favicon.png">
         <script src="./js/moodPlaylist.js"></script>
     </head>
-    <body>
+    <body class="body">
         <div class="header">
         <header>
             <div class="navbarparent">
@@ -20,7 +20,8 @@
                     <div class="navbaricon"><a href="https://phianova.github.io"><p>Home</p></a></div>
                     <div class="navbaricon"><a href="https://phianova.github.io/about-me"><p>About Me</p></a></div>
                     <div class="navbaricon"><a href="https://phianova.github.io/career"><p>Why this? Why now?</p></a></div>
-                    <div class="navbaricon"><a href="https://phianova.github.io/links"><p>Find me</p></a></div>                
+                    <div class="navbaricon"><a href="https://phianova.github.io/links"><p>Find me</p></a></div>  
+                    <div class="navbaricon"><a href="https://phianova.github.io/mudlark"><p>Mudlark (Game)</p></a></div>  
                 </div>
             </div>
         </header>
@@ -44,21 +45,21 @@
                 </p>
             </div>
             <div class="container-interactive">
-                <button class="open-modal">Click here for your mood-based Spotify playlist</button>
-                <div class="modal-content hidden-modal">
-                    <div class="modal-header">
-                        <button class="close-modal">X</button>
+                <button class="open-playlist-modal">Click here for your mood-based Spotify playlist</button>
+                <div class="playlist-modal-content hidden-modal">
+                    <div class="playlist-modal-header">
+                        <button class="close-playlist-modal">X</button>
                         <h3 class="question hidden-question">How are you feeling today?</h3>
                     </div>
-                    <div class="modal-body">
+                    <div class="playlist-modal-body">
                         <div class="moods-box">
-                            <button id="mood" class="mood-selector mood-selector-1"><a href="https://open.spotify.com/embed/playlist/4CjEUUoSBF5zdEA5jfJUNZ?utm_source=generator" target="playlistLink">Relaxed, like a summer's evening with a cool breeze</a></button>
-                            <button id="mood" class="mood-selector mood-selector-2"><a href="https://open.spotify.com/embed/playlist/2h3USsPOMXeNuz5lU4Rsdn?utm_source=generator" target="playlistLink">Relaxed, like a winter's evening with a hot chocolate</a></button>
-                            <button id="mood" class="mood-selector mood-selector-3"><a href="https://open.spotify.com/embed/playlist/05PtFCMUzNfznlZDxdepM1?utm_source=generator" target="playlistLink">Angsty, like a teenager going through a breakup</a></button>
-                            <button id="mood" class="mood-selector mood-selector-4"><a href="https://open.spotify.com/embed/playlist/3IFgoC61KWrfTN8O7O79AG?utm_source=generator" target="playlistLink">Angsty, because I'm mad at the government</a></button>
-                            <button id="mood" class="mood-selector mood-selector-5"><a href="https://open.spotify.com/embed/playlist/4aD5qAacFjB6jGwmPdJb8P?utm_source=generator" target="playlistLink">Sad, and I wanna cheer up</a></button>
-                            <button id="mood" class="mood-selector mood-selector-6"><a href="https://open.spotify.com/embed/playlist/3AQM3CEAlqK96YCohnTAcy?utm_source=generator" target="playlistLink">Sad, and I wanna wallow and have a little cry</a></button>
-                            <button id="mood" class="mood-selector mood-selector-7"><a href="https://open.spotify.com/embed/playlist/1atBiiQZQLGS6Sz6Hb5Veh?utm_source=generator" target="playlistLink">Like listening to the oddest and most incongruous mix you can offer</a></button>
+                            <button id="mood" class="mood-selector mood-selector-1"><a href="https://open.spotify.com/embed/playlist/4CjEUUoSBF5zdEA5jfJUNZ?utm_source=generator" target="playlistLink">Relaxed, like a summer's evening with a cool breeze<br></a></button>
+                            <button id="mood" class="mood-selector mood-selector-2"><a href="https://open.spotify.com/embed/playlist/2h3USsPOMXeNuz5lU4Rsdn?utm_source=generator" target="playlistLink">Relaxed, like a winter's evening with a hot chocolate<br></a></button>
+                            <button id="mood" class="mood-selector mood-selector-3"><a href="https://open.spotify.com/embed/playlist/05PtFCMUzNfznlZDxdepM1?utm_source=generator" target="playlistLink">Angsty, like a teenager going through a breakup<br></a></button>
+                            <button id="mood" class="mood-selector mood-selector-4"><a href="https://open.spotify.com/embed/playlist/3IFgoC61KWrfTN8O7O79AG?utm_source=generator" target="playlistLink">Angsty, because I'm mad at the government<br></a></button>
+                            <button id="mood" class="mood-selector mood-selector-5"><a href="https://open.spotify.com/embed/playlist/4aD5qAacFjB6jGwmPdJb8P?utm_source=generator" target="playlistLink">Sad, and I wanna cheer up<br></a></button>
+                            <button id="mood" class="mood-selector mood-selector-6"><a href="https://open.spotify.com/embed/playlist/3AQM3CEAlqK96YCohnTAcy?utm_source=generator" target="playlistLink">Sad, and I wanna wallow and have a little cry<br></a></button>
+                            <button id="mood" class="mood-selector mood-selector-7"><a href="https://open.spotify.com/embed/playlist/1atBiiQZQLGS6Sz6Hb5Veh?utm_source=generator" target="playlistLink">Like listening to the oddest and most incongruous mix you can offer<br></a></button>
                         </div>
                         <div class="embedded-playlist hidden-playlist">
                             <div class="loading-screen hidden-loading-screen">Finding your jam...</div>
