@@ -32,8 +32,14 @@ h3 {
     background-position: left top;
     background-size: 80px;
     background-repeat: repeat scroll;
-    padding: 50px;
+    padding: 30px;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .header {
@@ -77,6 +83,10 @@ h3 {
     padding-right: 50px;
 }
 
+.navbaricon-selected {
+    font-weight: bold;
+}
+
 .navbartitle {
     width: 30%;
 }
@@ -93,6 +103,7 @@ h3 {
     padding: 10px;
     position: relative;
     width: 28%;
+    overflow:auto;
 }
 
 .linkedimage:active {
@@ -105,6 +116,7 @@ h3 {
     width: 100%;
     border-radius: 10px;
     box-shadow: 5px 5px 5px 2px rgba(28, 29, 28, 0.863);
+    overflow:auto;
 }
 
 .textbox {
@@ -115,24 +127,37 @@ h3 {
     border-radius: 10px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 14px;
-    left: 30%;
-    right: 30%;
+    left: 20%;
+    right: 20%;
     bottom: 10%;
-    padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 10px;
     text-wrap: wrap;
+    overflow: auto;
 }
 
 .imagelinks {
     box-align: center;
-    width: 80%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding: 50px;
+    padding: 30px;
     display: flex;
     flex-flow: row wrap;
     align-content: center;
     align-items: center;
     justify-content: center;
+    overflow:auto;
+}
+
+.full-width-image {
+    box-align: center;
+    margin: 10px auto;
+    width: 80%;
+    padding: 20px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 /* text formatting for hyperlinks */
@@ -159,7 +184,7 @@ a:active {
 
 .container-body-text {
     box-align: center;
-    display: inline-flex;
+    display: flex;
     flex-flow: row wrap;
     width: 80%;
     margin: 10px auto;
@@ -172,7 +197,7 @@ a:active {
     box-shadow: 5px 5px 5px 2px rgb(24, 26, 26);
     line-height: 1.5;
     text-align: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .container-interactive {

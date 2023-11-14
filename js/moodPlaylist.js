@@ -1,6 +1,9 @@
 //Wait til content loaded
 document.addEventListener("DOMContentLoaded", function() {
 
+///////////////////////////////////
+/* Mood based playlist selector! */
+///////////////////////////////////
 //Declarations
     let playlistModalContent = document.querySelector(".playlist-modal-content");
     let openPlaylistModal = document.querySelector(".open-playlist-modal");
@@ -97,3 +100,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 });
+
+////////////////////////////
+/* Randomised video link! */
+////////////////////////////
+
+
+////////////////////////////
+/* Dice roller */
+////////////////////////////
+
