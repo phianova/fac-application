@@ -251,13 +251,9 @@ h3 {
 }
 
 .container-interactive {
-    box-align: center;
-    display: inline-flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    width: 80%;
-    margin: 0 auto;
-    padding: 50px;
+    width: 38%;
+    margin: 40px auto 30px auto;
+    padding: 30px;
     background-color: darkslategray;
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
@@ -265,6 +261,7 @@ h3 {
     border-radius: 25px;
     box-shadow: 5px 5px 5px 2px rgb(24, 26, 26);
     line-height: 1.5;
+    vertical-align: middle;
 }
 
 /* homepage-specific text/images */
@@ -281,6 +278,36 @@ h3 {
     font-weight: 500;
     padding:5px;
 }
+/* about me page */
+.about-me-body {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    width: 80%;
+    margin:auto;
+}
+
+.about-me-container-body-text {
+    width: 38%;
+    padding: 30px;
+    margin: 40px auto 30px auto;
+    background-color: darkslategray;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    color: paleturquoise;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px 2px rgb(24, 26, 26);
+    line-height: 1.5;
+    text-align: left;
+}
+
+.about-me-box-header {
+    text-align: left;
+    font-size: 30px;
+}
 
 /* modal on about me page */
 .open-playlist-modal {
@@ -295,6 +322,8 @@ h3 {
     outline: none;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
+    vertical-align: middle;
+
 }
 
 .open-playlist-modal:active {
@@ -302,14 +331,14 @@ h3 {
 }
 
 .playlist-modal-content {
+    position:fixed;
     background: slateblue;
     color:aliceblue;
     width: 70%;
     padding: 20px;
+    margin:auto;
     border-radius: 20px;
-    z-index: 99;
-    text-align: left;
-    ;
+    z-index: 100;
 }
 
 .playlist-modal-header {
@@ -321,6 +350,7 @@ h3 {
 .playlist-modal-body {
     font-size: 20px;
     line-height: 1.5;
+    text-align: left;
 }
 
 .hidden-modal {
@@ -343,6 +373,80 @@ h3 {
     color:rgb(98, 125, 125);
 }
 
+/* DND modal on About Me page */
+.open-dice-modal {
+    background-color: turquoise;
+    color: black;
+    border: none;
+    padding: 20px;
+    font-size: 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    outline: none;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+.open-dice-modal:active {
+    transform: translateY(-17px);
+}
+
+.dice-modal-content {
+    position:fixed;
+    background: slateblue;
+    color:aliceblue;
+    width: 70%;
+    padding: 20px;
+    margin:auto;
+    border-radius: 20px;
+    z-index: 100;
+}
+
+.dice-modal-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.dice-modal-body {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.hidden-modal {
+    display: none;
+}
+
+.close-dice-modal {
+    background: transparent;
+    border: none;
+    align-items: left;
+    justify-content: left;
+    height: 20px;
+    width: 20px;
+    font-size: 30px;
+    color:aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.close-dice-modal:hover {
+    color:rgb(98, 125, 125);
+}
+
+.dice-text {
+    color: aliceblue;
+    font-size: 25px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.hidden-dice-text {
+    display: none;
+}
 /* Career page formatting */
 .career-container-body-text {
     box-align: center;
@@ -512,6 +616,7 @@ h3 {
     display: block;
     z-index: 100;
     font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
     color: aliceblue;
     width:100%;
     height:100px;

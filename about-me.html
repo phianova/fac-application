@@ -7,7 +7,7 @@
         <title>Sophia Warren: About me</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
         <link rel="icon" href="images/favicon.png">
-        <script src="./js/moodPlaylist.js"></script>
+        <script src="./js/aboutMe.js"></script>
     </head>
     <body class="body">
         <div class="header">
@@ -26,26 +26,13 @@
             </div>
         </header>
         </div>
-
-
         <main>
             <div class="container-body-text">
                 <p>I contain multitudes (as do we all).
                 <br>Here are a couple of my interests.
                 </p>
             </div>
-            <div class="container-body-text">
-                <h3>Music<br></h3>
-                <p>I'm a huge fan of playing, writing and listening to music.
-                <!--TODO: Music section - randomised video link
-                <script type="text/javascript" src="/js/randomisedVideo.js">-->
-                <!--<br>Click here for a randomised video of me playing one of my original songs.-->
-                <!--TODO: Music section - mood quiz and spotify playlist-->
-                <br>Want a tailored playlist for your mood today? See below...
-                </p>
-            </div>
-            <div class="container-interactive">
-                <button class="open-playlist-modal">Click here for your mood-based Spotify playlist</button>
+            <div class="about-me-body">
                 <div class="playlist-modal-content hidden-modal">
                     <div class="playlist-modal-header">
                         <button class="close-playlist-modal">X</button>
@@ -68,23 +55,51 @@
                         </div>
                     </div>
                 </div>
+                <div class="dice-modal-content hidden-modal">
+                    <div class="dice-modal-header">
+                        <button class="close-dice-modal">X</button>
+                        <h3 class="dice-text hidden-dice-text">How are you feeling today?</h3>
+                    </div>
+                    <div class="dice-modal-body">
+                    </div>
+                </div>
+                <div class="about-me-container-body-text">
+                    <h3 class="about-me-box-header">Music<br></h3>
+                    <p>I'm a huge fan of playing, writing and listening to music.
+                    <br><a class="links" id="video-link" onclick="randomVideo()" href="https://youtu.be/qXCy-_DcKuE">Click here for a randomised video of one of my original songs.</a>
+                    <br>Want a tailored playlist for your mood today? Click the button on the right...
+                    </p>
+                </div>
+                <div class="container-interactive">
+                    <button class="open-playlist-modal">Click here for a Spotify playlist based on your mood today</button>
+                </div>
+                <!-- <div class="about-me-container-body-text">
+                    <h3>Nature</h3> 
+                    <p>I love nature - especially birds, plants, and mushrooms. -->
+                    <!--TODO: Nature section - bird profiles-->
+                    <!--<br>Click here for xxx.-->
+                    <!--TODO: Nature section - mushroom colours-->
+                    <!--</p>
+                </div>
+                <div class="about-me-container-body-text">
+                    <h3>Dungeons and Dragons</h3>
+                    <p>Your adventure is soon to begin. Pick a character to start:-->
+                    <!--TODO: DND section - rolls and prompts-->
+                    <!--<br>Click here for xxx.-->
+                    <!--TODO: Link to game?-->
+                    <!--</p>
+                </div> -->
+                <div class="about-me-container-body-text">
+                    <h3 class="about-me-box-header">Dungeons and Dragons<br></h3>
+                    <p>I've been obsessed with all things DND for several years.
+                        <br>I don't claim to be anything other than an amateur, for-fun player, but it's one of my main hobbies.
+                        <br>To the right you'll see a button. Click it if you dare (disclaimer: please do not expect an actual RPG this is just a little dice roller)
+                    </p>
+                </div>
+                <div class="container-interactive">
+                    <button class="open-dice-modal">Click here to start your (brief) adventure</button>
+                </div>
             </div>
-            <!-- <div class="container-body-text">
-                <h3>Nature</h3> 
-                <p>I love nature - especially birds, plants, and mushrooms. -->
-                <!--TODO: Nature section - bird profiles-->
-                <!--<br>Click here for xxx.-->
-                <!--TODO: Nature section - mushroom colours-->
-                <!--</p>
-            </div>
-            <div class="container-body-text">
-                <h3>Dungeons and Dragons</h3>
-                <p>Your adventure is soon to begin. Pick a character to start:-->
-                <!--TODO: DND section - rolls and prompts-->
-                <!--<br>Click here for xxx.-->
-                <!--TODO: Link to game?-->
-                <!--</p>
-            </div> -->
         </main>    
     </body>
     <div class="footer">
