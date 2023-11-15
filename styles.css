@@ -138,10 +138,10 @@ h3 {
 
 .imagelinks {
     box-align: center;
-    width: 100%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
-    padding: 30px;
+    padding: 30px 10px 5px 10px;
     display: flex;
     flex-flow: row wrap;
     align-content: center;
@@ -154,7 +154,7 @@ h3 {
     box-align: center;
     margin: 10px auto;
     width: 80%;
-    padding: 20px;
+    padding: 5px 20px 10px 20px;
     justify-content: center;
     align-content: center;
     align-items: center;
