@@ -83,6 +83,26 @@ h3 {
     padding-right: 50px;
 }
 
+.navbarlink:link {
+    text-decoration: none;
+    color: black;
+}
+
+.navbarlink:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.navbarlink:hover {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.navbarlink:active {
+    color: white;
+    text-decoration: none;
+}
+
 .navbaricon-selected {
     font-weight: bold;
 }
@@ -125,6 +145,7 @@ h3 {
     color:black;
     background-color: white;
     border-radius: 10px;
+    border: 2px solid grey;
     font-family: 'Courier New', Courier, monospace;
     font-size: 14px;
     left: 20%;
@@ -141,7 +162,7 @@ h3 {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    padding: 30px 10px 5px 10px;
+    padding: 0px 10px 5px 10px;
     display: flex;
     flex-flow: row wrap;
     align-content: center;
@@ -154,30 +175,57 @@ h3 {
     box-align: center;
     margin: 10px auto;
     width: 80%;
-    padding: 5px 20px 10px 20px;
+    padding: 5px 20px 30px 20px;
     justify-content: center;
     align-content: center;
     align-items: center;
 }
 
 /* text formatting for hyperlinks */
-a:link {
+.links:link {
+    text-decoration: none;
+    font-weight: bold;
+    color: paleturquoise;
+}
+
+.links:visited {
+    color: paleturquoise;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.links:hover {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.links:active {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-link:link {
+    text-decoration: none;
+    color: black;
+}
+
+.footer-link:visited {
     color: black;
     text-decoration: none;
 }
 
-a:visited {
-    color: slateblue;
+.footer-link:hover {
+    color: white;
     text-decoration: none;
+    font-weight:bold;
 }
 
-a:hover {
-    color: black;
-    text-decoration: bold;
-}
-a:active {
-    color: black;
-    text-decoration: bold;
+.footer-link:active {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 /* standard containers throughout site */
@@ -187,16 +235,18 @@ a:active {
     display: flex;
     flex-flow: row wrap;
     width: 80%;
-    margin: 10px auto;
-    padding: 50px;
+    margin: 40px auto 30px auto;
+    padding: 30px;
     background-color: darkslategray;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
+    font-size: 18px;
     color: paleturquoise;
     border-radius: 25px;
     box-shadow: 5px 5px 5px 2px rgb(24, 26, 26);
     line-height: 1.5;
     text-align: center;
+    align-items: center;
+    align-content: center;
     justify-content: center;
 }
 
@@ -215,7 +265,6 @@ a:active {
     border-radius: 25px;
     box-shadow: 5px 5px 5px 2px rgb(24, 26, 26);
     line-height: 1.5;
-    align-items: center;
 }
 
 /* homepage-specific text/images */
@@ -229,6 +278,8 @@ a:active {
 .body-text {
     text-wrap: wrap;
     width:60%;
+    font-weight: 500;
+    padding:5px;
 }
 
 /* modal on about me page */
@@ -258,6 +309,7 @@ a:active {
     border-radius: 20px;
     z-index: 99;
     text-align: left;
+    ;
 }
 
 .playlist-modal-header {
@@ -290,6 +342,86 @@ a:active {
 .close-playlist-modal:hover {
     color:rgb(98, 125, 125);
 }
+
+/* Career page formatting */
+.career-container-body-text {
+    box-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
+    margin: 40px auto 30px auto;
+    padding: 30px;
+    background-color: azure;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    color: black;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px 2px rgb(24, 26, 26);
+    line-height: 1.5;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.career-header {
+    margin-bottom: 10px;
+    margin-top: 0px;
+    font-size: 25px;
+}
+.career-text {
+    text-align: left;
+    font-weight: 100;
+    margin: auto 10px 20px 10px;
+    line-height: 2;
+    padding: 10px;
+}
+
+.embedded-badge {
+    border-radius: 10px;
+    border: 2px solid black;
+    transition: all 0.3s;
+    height: 40px;
+    padding: 10px;
+    margin: 5px;
+    align-content:center;
+    align-items: center;
+    text-align:center;
+    display:flex;
+    vertical-align: middle;
+}
+
+.embedded-badge:active {
+    transform: translateY(17px);
+}
+
+.badge-image {
+    vertical-align: middle;
+}
+
+.career-links:link {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.career-links:visited {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.career-links:hover {
+    color: slateblue;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.career-links:active {
+    color: slateblue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 /* background blurring */
 .blur-background {
     position: fixed;
