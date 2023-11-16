@@ -310,7 +310,7 @@ h3 {
 .about-me-container-body-text {
     width: 45%;
     padding: 30px;
-    margin: 40px auto 30px auto;
+    margin: auto auto 20px auto;
     background-color: darkslategray;
     font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
