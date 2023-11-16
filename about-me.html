@@ -19,7 +19,7 @@
                 <div class="navbar">
                     <div class="navbaricon"><a class="navbarlink" href="https://phianova.github.io"><p>Home</p></a></div>
                     <div class="navbaricon navbaricon-selected"><a class="navbarlink" href="https://phianova.github.io/about-me"><p>About me</p></a></div>
-                    <div class="navbaricon"><a class="navbarlink" href="https://phianova.github.io/career"><p>Career</p></a></div>
+                    <div class="navbaricon"><a class="navbarlink" href="https://phianova.github.io/development"><p>Development</p></a></div>
                     <div class="navbaricon"><a class="navbarlink" href="https://phianova.github.io/links"><p>Find me</p></a></div>  
                     <div class="navbaricon"><a class="navbarlink" href="https://phianova.github.io/mudlark"><p>Play Mudlark (Game)</p></a></div>  
                 </div>
@@ -32,37 +32,43 @@
                 <br>Here are a couple of my interests.
                 </p>
             </div>
+            <div class="playlist-modal-content hidden-modal">
+                <div class="playlist-modal-header">
+                    <button class="close-playlist-modal">X</button>
+                    <h3 class="question hidden-question">How are you feeling today?</h3>
+                </div>
+                <div class="playlist-modal-body">
+                    <div class="moods-box">
+                        <button id="mood" class="mood-selector mood-selector-1"><a class="navbarlink" href="https://open.spotify.com/embed/playlist/4CjEUUoSBF5zdEA5jfJUNZ?utm_source=generator" target="playlistLink">Relaxed, like a summer's evening with a cool breeze<br></a></button>
+                        <button id="mood" class="mood-selector mood-selector-2"><a class="navbarlink" href="https://open.spotify.com/embed/playlist/2h3USsPOMXeNuz5lU4Rsdn?utm_source=generator" target="playlistLink">Relaxed, like a winter's evening with a hot chocolate<br></a></button>
+                        <button id="mood" class="mood-selector mood-selector-3"><a class="navbarlink" href="https://open.spotify.com/embed/playlist/05PtFCMUzNfznlZDxdepM1?utm_source=generator" target="playlistLink">Angsty, like a teenager going through a breakup<br></a></button>
+                        <button id="mood" class="mood-selector mood-selector-4"><a class="navbarlink" href="https://open.spotify.com/embed/playlist/3IFgoC61KWrfTN8O7O79AG?utm_source=generator" target="playlistLink">Angsty, because I'm mad at the government<br></a></button>
+                        <button id="mood" class="mood-selector mood-selector-5"><a class="navbarlink" href="https://open.spotify.com/embed/playlist/4aD5qAacFjB6jGwmPdJb8P?utm_source=generator" target="playlistLink">Sad, and I wanna cheer up<br></a></button>
+                        <button id="mood" class="mood-selector mood-selector-6"><a class="navbarlink" href="https://open.spotify.com/embed/playlist/3AQM3CEAlqK96YCohnTAcy?utm_source=generator" target="playlistLink">Sad, and I wanna wallow and have a little cry<br></a></button>
+                        <button id="mood" class="mood-selector mood-selector-7"><a class="navbarlink" href="https://open.spotify.com/embed/playlist/1atBiiQZQLGS6Sz6Hb5Veh?utm_source=generator" target="playlistLink">Like listening to the oddest and most incongruous mix you can offer<br></a></button>
+                    </div>
+                    <div class="embedded-playlist hidden-playlist">
+                        <div class="loading-screen hidden-loading-screen">Finding your jam...</div>
+                        <iframe id="playlistLink" name="playlistLink" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1atBiiQZQLGS6Sz6Hb5Veh?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="dice-modal-content hidden-modal">
+                <div class="dice-modal-header">
+                    <button class="close-dice-modal">X</button>
+                    <h3 class="dice-text hidden-dice-text" id="dice-text">You're in a forest, looking for birds and mushrooms. You see a nest up a tree. Roll Strength to climb the tree to take a picture (without disturbing the birds, of course).</h3>
+                </div>
+                <div class="dice-modal-body">
+                    <button class="dice-roller" id="dice-roller" onclick="diceRoll()"> 
+                        <img class="dice-image" id="dice-image" src="./images/diceRoll/questionMark.png">
+                    </button>
+                    <button class="restart-dice-roller" id="restart-dice-roller" onclick="restartDiceRoll()"> 
+                        <img class="dice-image" id="restart-dice-image" src="./images/diceRoll/questionMark.png">
+                    </button>
+                </div>
+            </div>
             <div class="about-me-body">
-                <div class="playlist-modal-content hidden-modal">
-                    <div class="playlist-modal-header">
-                        <button class="close-playlist-modal">X</button>
-                        <h3 class="question hidden-question">How are you feeling today?</h3>
-                    </div>
-                    <div class="playlist-modal-body">
-                        <div class="moods-box">
-                            <button id="mood" class="mood-selector mood-selector-1"><a class="navbarlink" href="https://open.spotify.com/embed/playlist/4CjEUUoSBF5zdEA5jfJUNZ?utm_source=generator" target="playlistLink">Relaxed, like a summer's evening with a cool breeze<br></a></button>
-                            <button id="mood" class="mood-selector mood-selector-2"><a class="navbarlink" href="https://open.spotify.com/embed/playlist/2h3USsPOMXeNuz5lU4Rsdn?utm_source=generator" target="playlistLink">Relaxed, like a winter's evening with a hot chocolate<br></a></button>
-                            <button id="mood" class="mood-selector mood-selector-3"><a class="navbarlink" href="https://open.spotify.com/embed/playlist/05PtFCMUzNfznlZDxdepM1?utm_source=generator" target="playlistLink">Angsty, like a teenager going through a breakup<br></a></button>
-                            <button id="mood" class="mood-selector mood-selector-4"><a class="navbarlink" href="https://open.spotify.com/embed/playlist/3IFgoC61KWrfTN8O7O79AG?utm_source=generator" target="playlistLink">Angsty, because I'm mad at the government<br></a></button>
-                            <button id="mood" class="mood-selector mood-selector-5"><a class="navbarlink" href="https://open.spotify.com/embed/playlist/4aD5qAacFjB6jGwmPdJb8P?utm_source=generator" target="playlistLink">Sad, and I wanna cheer up<br></a></button>
-                            <button id="mood" class="mood-selector mood-selector-6"><a class="navbarlink" href="https://open.spotify.com/embed/playlist/3AQM3CEAlqK96YCohnTAcy?utm_source=generator" target="playlistLink">Sad, and I wanna wallow and have a little cry<br></a></button>
-                            <button id="mood" class="mood-selector mood-selector-7"><a class="navbarlink" href="https://open.spotify.com/embed/playlist/1atBiiQZQLGS6Sz6Hb5Veh?utm_source=generator" target="playlistLink">Like listening to the oddest and most incongruous mix you can offer<br></a></button>
-                        </div>
-                        <div class="embedded-playlist hidden-playlist">
-                            <div class="loading-screen hidden-loading-screen">Finding your jam...</div>
-                            <iframe id="playlistLink" name="playlistLink" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1atBiiQZQLGS6Sz6Hb5Veh?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-                            </iframe>
-                        </div>
-                    </div>
-                </div>
-                <div class="dice-modal-content hidden-modal">
-                    <div class="dice-modal-header">
-                        <button class="close-dice-modal">X</button>
-                        <h3 class="dice-text hidden-dice-text">How are you feeling today?</h3>
-                    </div>
-                    <div class="dice-modal-body">
-                    </div>
-                </div>
                 <div class="about-me-container-body-text">
                     <h3 class="about-me-box-header">Music<br></h3>
                     <p>I'm a huge fan of playing, writing and listening to music.
@@ -73,32 +79,49 @@
                 <div class="container-interactive">
                     <button class="open-playlist-modal">Click here for a Spotify playlist based on your mood today</button>
                 </div>
-                <!-- <div class="about-me-container-body-text">
-                    <h3>Nature</h3> 
-                    <p>I love nature - especially birds, plants, and mushrooms. -->
-                    <!--TODO: Nature section - bird profiles-->
-                    <!--<br>Click here for xxx.-->
-                    <!--TODO: Nature section - mushroom colours-->
-                    <!--</p>
-                </div>
-                <div class="about-me-container-body-text">
-                    <h3>Dungeons and Dragons</h3>
-                    <p>Your adventure is soon to begin. Pick a character to start:-->
-                    <!--TODO: DND section - rolls and prompts-->
-                    <!--<br>Click here for xxx.-->
-                    <!--TODO: Link to game?-->
-                    <!--</p>
-                </div> -->
                 <div class="about-me-container-body-text">
                     <h3 class="about-me-box-header">Dungeons and Dragons<br></h3>
                     <p>I've been obsessed with all things DND for several years.
                         <br>I don't claim to be anything other than an amateur, for-fun player, but it's one of my main hobbies.
-                        <br>To the right you'll see a button. Click it if you dare (disclaimer: please do not expect an actual RPG this is just a little dice roller)
+                        <br>I decided to make a tiny dice-rolling adventure about foraging and birdwatching, combining my love of DND with my love of nature.
+                        <br>To the right you'll see a button. Click it if you dare! (disclaimer: hardcore DND players may be disappointed)
                     </p>
                 </div>
                 <div class="container-interactive">
                     <button class="open-dice-modal">Click here to start your (brief) adventure</button>
                 </div>
+            </div>
+            <div class="container-body-text">
+                <h3 class="about-me-box-header-center">Travel<br></h3>
+                <p>I also love travelling!
+                <br>Below are some photos I've taken of my favourite places in the world (so far).
+                </p>
+            </div>
+            <div class="linkedimage full-width-image">
+                <a href="https://maps.app.goo.gl/h59LjU9Egb38g2Mu8"><img class="image" src="./images/places/arran.jpg" alt="A picture of two people (my friends!) silhouetted against a sunrise by a beach with an island rising out of the water in front of them">
+                    <div class="textbox"><h3>📍 Lagg, Isle of Arran, Outer Hebrides, Scotland</h3></div></a>
+            </div>
+            <div class="imagelinks">
+                <div class="linkedimage">
+                    <a href="https://maps.app.goo.gl/PLQaMHpH5mjNfw1y9"><img class="image" src="./images/places/grassmarket.jpg" alt="A picture of Edinburgh's Grassmarket, with multicoloured shopfronts spiralling up a hill">
+                        <div class="textbox"><h3>📍 Grassmarket, Edinburgh, Scotland</h3></div></a>
+                </div>
+                <div class="linkedimage">
+                    <a href="https://maps.app.goo.gl/VzchuinyciazmBGK7"><img class="image" src="./images/places/jordaan.jpg" alt="A picture of a canal in Amsterdam lined with boats and bicycles">
+                        <div class="textbox"><h3>📍 Jordaan, Amsterdam, Netherlands</h3></div></a>
+                </div>
+                <div class="linkedimage">
+                    <a href="https://maps.app.goo.gl/abM5dJjCMULGhAXDA"><img class="image" src="./images/places/rhossili.jpg" alt="A picture of Rhossili Bay at sunset, with a house on a striking headland jutting out into the sea">
+                        <div class="textbox"><h3>📍 Rhossili Bay, Gower Peninsula, Wales</h3></div></a>
+                </div>
+            </div>
+            <div class="linkedimage full-width-image">
+                <a href="https://maps.app.goo.gl/wE8HdrKotyB8ioNS6"><img class="image" src="./images/places/palaiochora.jpg" alt="A picture of a beach at sunset with grass umbrellas in Palaiochora, Crete">
+                    <div class="textbox"><h3>📍 Pachia Ammos, Palaiochora, Crete, Greece</h3></div></a>
+            </div>
+            <div class="linkedimage full-width-image">
+                <a href="https://maps.app.goo.gl/mmscDBLaubw9GiFj7"><img class="image" src="./images/places/wairakei.jpg" alt="A picture of a volcanic valley in Wairakei, New Zealand, filled with lush plants and steam">
+                    <div class="textbox"><h3>📍 Wairakei Valley, Taupo, New Zealand</h3></div></a>
             </div>
         </main>    
     </body>

@@ -124,6 +124,7 @@ h3 {
     position: relative;
     width: 28%;
     overflow:auto;
+    transition: all 0.2s;
 }
 
 .linkedimage:active {
@@ -179,6 +180,22 @@ h3 {
     justify-content: center;
     align-content: center;
     align-items: center;
+}
+
+.quarterlinkedimage {
+    padding: 10px;
+    position: relative;
+    width: 20%;
+    overflow:clip;
+    transition: all 0.2s;
+}
+
+.linkedimage:hover {
+    transform: translateY(-12px);
+}
+
+.quarterlinkedimage:hover {
+    transform: translateY(-12px);
 }
 
 /* text formatting for hyperlinks */
@@ -251,7 +268,7 @@ h3 {
 }
 
 .container-interactive {
-    width: 38%;
+    width: 40%;
     margin: 40px auto 30px auto;
     padding: 30px;
     background-color: darkslategray;
@@ -291,7 +308,7 @@ h3 {
 }
 
 .about-me-container-body-text {
-    width: 38%;
+    width: 45%;
     padding: 30px;
     margin: 40px auto 30px auto;
     background-color: darkslategray;
@@ -309,7 +326,12 @@ h3 {
     font-size: 30px;
 }
 
-/* modal on about me page */
+.about-me-box-header-center {
+    text-align: center;
+    font-size: 30px;
+}
+
+/* playlist modal on about me page */
 .open-playlist-modal {
     background-color: turquoise;
     color: black;
@@ -331,12 +353,14 @@ h3 {
 }
 
 .playlist-modal-content {
-    position:fixed;
+    position: fixed;
+    top:10%;
     background: slateblue;
     color:aliceblue;
     width: 70%;
     padding: 20px;
-    margin:auto;
+    margin: 10%;
+    justify-content: center;
     border-radius: 20px;
     z-index: 100;
 }
@@ -395,7 +419,8 @@ h3 {
 }
 
 .dice-modal-content {
-    position:fixed;
+    position: fixed;
+    top: 0%;
     background: slateblue;
     color:aliceblue;
     width: 70%;
@@ -403,6 +428,8 @@ h3 {
     margin:auto;
     border-radius: 20px;
     z-index: 100;
+    margin: 10%;
+
 }
 
 .dice-modal-header {
@@ -414,7 +441,7 @@ h3 {
 .dice-modal-body {
     font-size: 20px;
     line-height: 1.5;
-    text-align: left;
+    text-align: center;
 }
 
 .hidden-modal {
@@ -439,14 +466,27 @@ h3 {
 
 .dice-text {
     color: aliceblue;
-    font-size: 25px;
+    font-size: 30px;
+    font-weight:400;
     text-align: center;
-    margin: 0 auto;
+    margin: 0px 10px;
+    padding: 30px 20px;
+    vertical-align: middle;
 }
 
 .hidden-dice-text {
     display: none;
 }
+
+.dice-roller {
+    border-radius: 100px;
+}
+
+.restart-dice-roller {
+    border-radius: 100px;
+    display: none;
+}
+
 /* Career page formatting */
 .career-container-body-text {
     box-align: center;
