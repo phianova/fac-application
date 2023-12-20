@@ -79,8 +79,8 @@ h3 {
 .navbaricon {
     font-family: 'Courier New', Courier, monospace;
     color: black;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .navbarlink:link {
@@ -114,7 +114,7 @@ h3 {
 .navbarparent {
     width: 100%;
     display:inline-flex;
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 /* images and linked images throughout site */
@@ -249,8 +249,8 @@ h3 {
 
 .container-body-text {
     box-align: center;
-    display: flex;
-    flex-flow: row wrap;
+    display: grid;
+    grid-template-columns: auto auto;
     width: 80%;
     margin: 40px auto 30px auto;
     padding: 30px;
@@ -265,6 +265,33 @@ h3 {
     align-items: center;
     align-content: center;
     justify-content: center;
+}
+
+@media only screen and (max-width: 900px) {
+    .container-body-text {
+        display: grid;
+        grid-template-columns: auto;
+        text-align: center;
+        margin: auto;
+    }
+    .body-text {
+        width: 100%;
+    }
+    .header {
+        padding-bottom: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 650px) {
+    .navbar {
+        width: 70%;
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .navbartitle {
+        display: none;
+    }
 }
 
 .container-interactive {
@@ -283,18 +310,21 @@ h3 {
 
 /* homepage-specific text/images */
 .profileimage {
-    width: 30%;
+    width: 60%;
     height: auto;
     object-fit: scale-down;
     padding: 4%;
+    margin: auto;
 }
 
 .body-text {
     text-wrap: wrap;
-    width:60%;
+    width: 90%;
     font-weight: 500;
     padding:5px;
+    margin: auto;
 }
+
 /* about me page */
 .about-me-body {
     display: flex;
